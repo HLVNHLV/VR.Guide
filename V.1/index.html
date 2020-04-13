@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realidad Virtual</title>
+    <link href="CSS/estilo.css" rel="stylesheet">
+    <script type="text/javascript" src="JS/JavaScript.JS"></script>
+    <link href="imagenes/sticker.png" rel="icon">
+    <link href="Imagenes/" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="heroimg" id="hero">
+    <div class="herotex">
+      <h1 style="font-size:50px">Introducción a la Realidad Virtual</h1>
+    </div>
+  </header>
+  <main>
+    <div class="Cuerpo"> <!--Introducción-->
+      <p>
+        Esta es una guía / introducción a la Realidad virtual, en la que explicaré cómo funciona la tecnología, qué visores existen, cuáles comprar, ventajas etc...
+      </p>
+      <p>
+        Aunque en general podemos dividirlo en 2 categorías (aunque realmente sean 3)
+      </p>
+      <p>
+        Son las siguientes : PCVR y Stand Alone
+      </p>
+      <p>
+        Vale, así que primero vamos a ver qué se necesita para "esto de la VR" y por qué debería 
+        importarte y luego hablaré de PCVR ya que es lo principal y después de los Stand Alone, después de eso reviews de HMDs.
+      </p>
+    </div>
+    <div class="separadorcuerpo"></div> <!--Esto es para hacer un espacio entre las secciones, todo muy profesional-->
+    <div class="VR" id="VR"> 
+      <h1>Características de la Realidad Virtual</h1>
+      <h2>
+        ¿Qué es un HMD?
+      </h2>
+      <p>Un HMD es lo que la gente suele entender por "visor de realidad virtual", consiste en unas pantallas pegadas a nuestros ojos junto a unas lentes para no tener que enfocar a pocos
+        centímetros y una serie de giroscopios y sensores.
+      </p>
+      <h2>¿Qué puedo hacer con esto?</h2>
+      <p>Esta es la parte divertida, con la Realidad Virtual puedes hacer... De todo.</p>
+      <p>Desde ver películas como si estuvieses en el cine con una pantalla gigantesca pero desde tu casa, estar en algún mundo de fantasía, usarla para ver un modelo de tu
+        casa en construcción y ver cómo podría quedar todo, ser un astronauta en la estación espacial internacional, pilotar y conducir aviones y coches, hablar con personas de cualquier
+        parte del mundo, ver películas con amigos que no viven cerca tuya... Todo es posible.
+      </p>
+      <h1>Glosario</h1>
+      <h2>3DOF y 6DOF</h2>
+      <p>Esto quiere decir sobre cuántos ejes se puede mover nuestra cabeza o mandos, DOF significa "Degrees Of Freedom", un visor o dispositivo 3 DOF solo se puede mover en 3 ejes espaciales
+        ya que solo tiene un sensor (giroscopio) y no es capaz de moverse en un espacio tridimensional, es como estar quieto pero poder mover la cabeza para mirar arriba o abajo.
+      </p>
+      <p>En cambio con 6 DOF puedes mirar hacia todos los lados y mover tu cabeza arriba, abajo o hacia detrás.</p>
+      <img class="centrado" src="imagenes/DOF.jpg">
+      <img src="imagenes/giphy.6dofgif.gif" class="centrado"> <!--La clase centrado es para que no se compriman las fotos en la esquina izquierda-->
+      <h2>SDE y la resolución</h2>
+      <p>Screen Door Effect o SDE, es el efecto que sucede cuando tienes una pantalla a muy poca distancia, ves los subpíxeles y el espacio entre estos, es como estar viendo a través
+        de una mosquitera, este es uno de los mayores problemas de la VR junto a la densidad de píxeles de las pantallas, aunque las pantallas que monten los HMDs tengan resoluciones de
+        alrededor de 1400 píxeles sigue habiendo un problema grave con la resolución, una persona a larga distancia (dependiendo del visor) se puede ver como un puñado de píxeles marrones
+        a lo lejos.
+      </p>
+      <img class="centrado" src="imagenes/SDE.png">
+      <img src="imagenes/Resolución.png" class="centrado">
+      <h2>Tipos de pantallas</h2>
+      <p>En la VR el tipo de pantalla es muy importante por varios factores, primero, dependiendo del tipo podemos tener negros puros (OLED) o grisáceos (LCD C), además de que cada
+        tipo de pantalla trae consigo su dosis de distorsiones varias, las LCD usan una matriz RGB y la OLED usa una "pentile" o en forma de diamante, por la forma en la que están colocadas
+        en la OLED hay más espacio entre los subpíxeles y por ello más SDE o efecto rejilla
+      </p>
+      <p>Además de todo esto es necesario que los visores trabajen a alrededor de 90 imágenes por segundo para tener claridad de imagen y que con el tiempo no resulte incómodo de llevar</p>
+      <img src="imagenes/Pentile.png" class="centrado">
+      <img src="imagenes/Screen.png" class="centrado">
+      <h2>Tracking</h2>
+      <p>El Tracking o seguimiento es lo que permite al visor moverse en 6DOF y no en 3DOF, es el posicionar el visor y mandos en un espacio tridimensional</p>
+      <p> Hay dos formas de hacerlo, Inside-out o por tracking externo, la idea es o bien tener unas cámaras o algún sistema para posicionar los dispositivos en el espacio (lighthouse 
+        y similares) o que esto se haga desde el propio visor.
+      </p>
+      <p>El problema es que con el tracking externo debes poner sensores, y el Inside-out puede fallar y ser impreciso, además de tener oclusión.</p>
+      <img src="imagenes/lighthouse.gif" class="centrado">
+      <h2>FOV</h2>
+      <p>El FOV o campo de visión es el área que eres capaz de ver, es como ver a través de unos prismáticos, normalmente son 85º aunque hay visores con mucho más.</p>
+      <img src="imagenes/fov.jpg" class="centrado">
+      <h2>Glare</h2>
+      <p>Esperemos que lo último, el Glare o "rayos de dios" es, literalmente, un montón de rayos de luz que empiezan a venir de ningún sitio y iluminan la lente como si fuera una linterna,
+        esto está provocado por las lentes, ya que para corregir unas deformaciones en la imagen... Añaden otras... Como el glare o las aberraciones cromáticas.
+      </p>
+      <p>También está el "Punto dulce", que es lo que ves nitído y también el IPD, la distancia entre las pupilas, si las lentes no están justo encima de los ojos puedes ver extremadamente mal.</p>
+      <p>Existen otras deformaciones de imagen, pero esto no es muy común así que no lo pongo pero la imagen se puede doblar como un barril (combarse hacia adentro) y más.</p>
+      <img src="imagenes/aberracion.jpg" class="centrado">
+      <img src="imagenes/Glare.jpg" class="centrado">
+      <img src="imagenes/Sweet.png" class="centrado">
+    </div>
+    <div class="PCVR" id="PC"><!--PCVR-->
+      <h1>
+        PCVR
+      </h1>
+      <p>
+        ¿Es cierto que necesitas un PC muy caro? Nope, ya hay hasta portátiles gaming de "gama baja" que pueden mover la VR sin demasiados problemas, por lo general 
+        el punto de partida de la VR es de... 700 euros, de hecho puedes jugar con un PC más barato, 
+        pero no lo recomiendo, con este PC vas bien para jugar a VR, y a cualquier juego, y ya de paso dejo el PC recomendado.
+      </p>
+      <div class="tabs">
+        <div class="tab-2">
+          <label for="tab2-1">Mínimo</label>
+          <input id="tab2-1" name="tabs-two" type="radio" checked="checked"> <!--Esto es una tabla con dos pestañas, puedes cambiar entre ellas-->
+          <div>
+            <p>CPU : R5 1600 AF</p>
+            <P>GPU : GTX 1660</P>
+            <P>RAM : 12GB @ 3000Mhz CL15</P>
+            <P>PSU : BitFenix Formula 550w</P>
+            <P>Motherboard : MSI Tomahawk MAX</P>
+            <p>https://www.pccomponentes.com/configurador/243f2d7eF</p>
+          </div>
+        </div>
+        <div class="tab-2">
+          <label for="tab2-2">Recomendado</label>
+          <input id="tab2-2" name="tabs-two" type="radio">
+          <div>
+            <p>CPU : R5 3600</p>
+            <P>GPU : RTX 2060</P>
+            <P>RAM : 16GB @ 3000Mhz CL15</P>
+            <P>PSU : BitFenix Formula 650w</P>
+            <P>Motherboard : MSI B450 Pro Carbon AC MAX</P>
+            <p>https://www.pccomponentes.com/configurador/25A6D8730</p>
+          </div>
+        </div>
+      </div>
+      <p>Ahora voy a explicar el por qué de esos componentes</p>
+      <h2>CPU</h2>
+      <p>En la VR la CPU es muy, MUY importante, la necesitamos porque...</p>
+      <P>A) Muchos juegos usan físicas en los objetos muy avanzadas, y ahora los juegos están dirigiendose a que todos los objetos estén basados en Físicas</P>
+      <p>B) Necesitamos producir +90 frames por segundo, esto normalmente no es un problema, pero con juegos mal optimizados (creeme, muchos, como The Forest), 
+        que abusan de las físicas (Boneworks) o si te vuelves loco instalando Mods (+180 mods en Skyrim VR, sé lo que es jugar a 15FPS) vas a desear tener una CPU potente.
+      </p>
+      <h2>GPU</h2>
+      <p>Antes he dicho que necesitamos +90 frames por segundo, alguien necesita procesar esos frames, normalmente no supone un reto, se podría bajar hasta incluso una 1050ti, pero
+        pasa lo de siempre, Skyrim con mods, Pavlov con mods, o VRCHAT, juego que abusa de la gráfica sin motivo aparente. En esto en concreto la RV es muy extraña, ya que
+        algunos juegos sorprenden por lo extremadamente bien que funcionan (Half - life : Alyx parece uno de ellos) pero siempre hay un juego que por algún motivo que uno no logra
+        entender tiene caídas de rendimiento abismales, y créeme, no quieres bajos FPS en VR, más de esto después.
+      </p>
+      <h2>El resto del sistema</h2>
+      <p>Este punto se explica solo, necesitamos una fuente de calidad, por ello la BitFenix, fuente de extremadamente buena calidad que puede durarte tranquilamente 7 años.
+        También necesitamos 12 o más GB de RAM, más que nada porque necesitamos ejecutar (drivers + home del visor) + SteamVR + Juego + Windows, y como quieras usar Revive es incluso peor.
+        La placa base es muuuy buena, completamente sobredimensionada, en el futuro podríamos meter hasta un 3900x sin problemas.
+      </p>
+    </div>
+    <div class="StandAlone"> <!--Esta es la parte en la que hablo de los Stand alone-->
+        <h1>
+          Stand Alone
+        </h1>
+        <p>
+          La segunda opción, estos visores no requiere de PC ni teléfono para funcionar, son completamente autónomos, sin cables, sensores, son portables etc...
+        </p>
+        <p>Tienen la desventaja de que valen para ver películas y poco más, no suelen tener tracking en 3 dimensiones... Aunque para ver películas es de lo mejor que hay. Por lo genenal
+          salvo una excepción no recomiendo los Stand Alone
+        </p>
+    </div>
+    <DIV class="Quest" id="Quest">
+      <h1>Oculus Quest</h1>
+      <p>Las Oculus Quest son un visor autónomo con 6DOF y dos controladores con tracking, todo esto propulsado por el Snapdragon 835 junto a unos poco impresionantes 4GB
+        de RAM (compartida) y 64GB de almacenamiento, algo obsoleto para lo que cuesta, pero funciona bien.
+      </p>
+      <p>Debo destacar que con un USB C de buena calidad puedes conectarlo al PC y usarlo, aunque en este caso es mejor usar unas Rift S, no solo por el tracking y el SDE, sino porque el
+        cable USB C va a tener que ser muuy corto, unos 5 metros, que suena a mucho, pero no lo es tanto.
+      </p>
+      <h2>Ventajas</h2>
+      <p>No necesitas PC, buena resolución, buenos negros, tracking / volúmen de tracking muy bueno y todas las ventajas que trae un visor que no necesita cables, y lo mejor, es portátil,
+        puedes llevarlo a donde quieras cuando quieras y la instalación es extremadamente sencilla.
+      </p>
+      <h2>Desventajas</h2>
+      <p>El visor pesa y tiene el peso mal repartido, por ello aprieta la cara y con el rato se hace bastante molesto, también tiene el grave problema de que su
+        pantalla es de 72Hz, esto a algunas personas les molesta mucho con el rato ya que te cansa la vista y usa pantallas Oled con matriz Pentile, por lo cual tiene cierto SDE.
+      </p>
+      <h2>Resúmen</h2>
+      <p>Si no tienes PC lo recomiendo mucho, es un visor con el que puedes jugar a un gran catálogo a un buen precio, pero en caso de que quieras jugar en PC recomiendo fuertemente las Rift S</p>
+      <table>
+        <caption>Especificaciones técnicas</caption> <!--Otra tablita-->
+        <thead>
+          <tr>
+            <th scope="col">Resolución</th>
+            <th scope="col">Hz</th>
+            <th scope="col">SoC</th>
+            <th scope="col">RAM</th>
+            <th scope="col">ROM</th>
+            <th scope="col">FOV</th>
+            <th scope="col">Tracking</th>
+            <th scope="col">Pantalla</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Resolución">1440 x 1600 (x2)</td>
+            <td data-label="Hz">72Hz</td>
+            <td data-label="SoC">Snapdragon 835</td>
+            <td data-label="RAM">4GB</td>
+            <td data-label="ROM">64GB-128GB</td>
+            <td data-label="FOV">~95º</td>
+            <td data-label="Tracking">Inside-out (x4)</td>
+            <td data-label="Pantalla">Oled Pentile</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="video-container"> <!--Un vídeo, para que esté centrado está "embutido" en este div-->
+        <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/i7aQuq7yWns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </DIV>
+    <div class="WMR" id="WMR"> <!--Windows Mixed Reality-->
+      <h1>Windows Mixed Reality</h1>
+      <p>Windows Mixed Reality es un estándar que sacó Microsoft para crear visores de Realidad Virtual, ellos crean un visor de referencia y el software y las empresas que quieran 
+        pueden usar ese estándar para desarrollar sus visores a bajo coste.
+      </p>
+      <p>El problema con Windows Mixed Reality es... Bueno. ¿He dicho que era un estándar medianamente abierto a bajo costo no? Si, pues resulta que todo el mundo empezó a sacar visores, 
+        todos eran el visor de referencia con otra carcasa, por lo tanto el mercado se inundó de visores que no se diferencian entre sí, HP, Asus, Dell, Lenovo, Samsung... Hasta Fujitsu, 
+        una empresa que se dedica a fabricar pilas tiene su propio visor, y todos casi iguales, pero la guinda sobre el pastel es que casi todos estos tienen IPD fijo y unas lentes bastante 
+        mediocres, es decir, que o tienes el IPD, o no vas a poder ver nada.
+      </p>
+      <P>Y últimamente Microsoft está abandonando todo esto de WMR, parece que va a salir un nuevo visor pero poco más, tienen a 3 personas trabajando en esto y ya.</P>
+      <h2>Ventajas</h2>
+      <p>Son unos visores muuuuuy baratos, han llegado a estar a 150 euros y la verdad, ofrecen una calidad de imagen bastante decente y para lo que valen merecen mucho la pena, y lo mejor,  
+        estos visores en su momento fueron "revolucionarios" porque el tracking se realiza desde el propio visor, nada de sensores, y eso atrajo a mucha gente.
+      </p>
+      <h2>Desventajas</h2>
+      <p>¿Te acuerdas de eso del IPD fijo? ¿Y de las lentes de mala calidad? Bueno pues encima muchos de ellos pueden ser incómodos, llevan pantalla LCD C de muy mala calidad y por ello 
+        tienen unos negros muy malos y incluso tienen Ghosting, pero lo mejor es el tracking, tienen dos cámaras delante y ya, con eso puedes trackear los mandos cuando los tienes en la cara, 
+        pero cuando los tienes sueltos o hacia los lados no los trackea, por suerte tiene acelerómetros y es capaz de "adivinar" por dónde andan los controladores.
+      </p>
+      <p>Pero la cosa no acaba ahí, los mandos son... No son incómodos, pero tampoco cómodos, tienen un tracking que a veces va bien y otras va muy mal, y este es el mayor problema, usa 
+        cámaras en blanco y negro a lo que parece 360p para todo el seguimiento, y por ello el propio visor a veces se mueve un poco, esto no sería un problema de no ser de que mi pared es 
+        blanca, con un armario blanco delante, entonces muchas veces pierdo el tracking o el visor se mueve sin motivo aparente.
+      </p>
+      <h2>Resúmen</h2>
+      <p>Unos visores a un excelente precio con unas prestaciones aceptables, pero solo lo recomiendo a gente sin dinero, principalmente estudiantes.</p>
+      <table>
+        <caption>Especificaciones técnicas</caption>
+        <thead> <!--Otra tablita-->
+          <tr>
+            <th scope="col">Resolución</th>
+            <th scope="col">Hz</th>
+            <th scope="col">FOV</th>
+            <th scope="col">Tracking</th>
+            <th scope="col">Pantalla</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Resolución">1440 x 1440 (x2)</td>
+            <td data-label="Hz">60 - 90 Hz</td>
+            <td data-label="FOV">~90º</td>
+            <td data-label="Tracking">Inside-out (x2)</td>
+            <td data-label="Pantalla">LCD C</td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+      <div class="video-container"> <!--De nuevo otra cajita con un vídeo adentro-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VCqfs6yg2XU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="Informarse" id="Informarse">
+      <h1>¿Dónde informarse?</h1>
+      <P>Lo primero es que si quieres meterte en esto de la VR el inglés te va a venir muy bien, pero por lo general vé a por medios especializados en el tema, a páginas y personas 
+        dedicadas a esto porque en las webs comunes todavía hay "prejuicios" de la época en la que la VR nació.
+      </P>
+      <p>Podemos dividir las distintas "fuentes" de noticias en dos:</p>
+      <h2>Páginas web</h2>
+      <p>Aquí solo hay una web en Español dedicada a la VR, y dos que recomiendo pero en Inglés:</p>
+      <p>Real o Virtual</p>
+      <p>Road to VR</p>
+      <p>Upload VR</p>
+      <p>Ahora, en materia de canales de YouTube hay más variedad, de nuevo solo uno en español que recomiende, pero muchos en Inglés, aquí la lista:</p>
+      <p>Alehandoro VR</p>
+      <p>Tyriel wood</p>
+      <p>MRTV</p>
+      <p>Eric for president</p>
+      <p>Virtual Reality Oasis</p>
+      
+    </div>
+    <div class="FAQ" id="FAQ"> <!--Preguntas frecuentes-->
+      <h1>FAQ</h1>
+      <h2>¿La VR marea?</h2>
+      <p>Respuesta corta : No</p>
+      <P>Respuesta media : Lo que te marea no es la VR, es el moverte estando quieto</P>
+      <p>Respuesta larga :</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NcSdPbL-cIY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <h2>He leído que la calidad de imagen es muy mala, ¿es verdad?</h2>
+      <p>Si, y no</p>
+      <p>Todos estos mitos de la RV vienen de los primeros años de esta, en esa época (2016) casi no habían juegos y los que habían eran poco más que prototipos, los visores eran exageradamente 
+        caros (HTC Vive / Oculus Rift CV1) y encima la calidad de imagen era muy, MUY mala, si sumas todo eso con lo de "los mareos en la VR" ya puedes ver cómo ha acabado la cosa.
+      </p>
+      <p>Pero eso no es todo, la mayoría de la gente cree que la VR es un móvil pegado a unas gafas de cartón, cuando simple y sencillamente no es así, ni se acerca a un visor de verdad.</p>
+      <p>Pero en la actualidad los visores de media tienen casi el doble de densidad de píxeles, mejores lentes etc, la calidad ha aumentado salvajemente, pero mejor que lo veas por tí mismo.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XcaoZ7M0JY8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <h2>¿Necesito un PC potente?</h2>
+      <p>Bueno, una GTX 1660 es de las gráficas mas malas que tiene Nvidia, y el 1600 AF a 90 euros igual, yo no llamaría a eso un equipo "potente" 
+        así que no, no hace falta un PC potente.
+      </p>
+      <h2>No hay juegos</h2>
+      <p>Half Life Alyx, Lone Echo, Lone echo 2, Stormland, Asgard wrath, Artika 1, red matter, After the fall, Beatsaber, Blade and sorcery, The forest, Untill you fall, wilson´s heart, In Death, Apex construct, Contractors, Onward, Pavlov, Project cars 2, Space junkies, Robo recall, Espire 1,Gorn, Vader Inmortal 1/2, Boneworks, The walking dead saints and sinners, the walking dead onslaught, Arizona shunshine, no man's sky, Job simulator, Hellsplit, Arena VR, Moss, Rec room, Orbus VR</p>
+      <h2>Los juegos son aburridos</h2>
+      <p>Este soy yo</p>
+      <img src="imagenes/SteamVR Horas.png" class="centrado">
+      <p>Y este es el juego de VR más divertido que hay</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3ehSPtWoiuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"> <!--El footer, he creado una "tabla" invisible en la que meter las cosas adentro, no se me ha ocurrido otra cosa-->
+    <h1 id="contacto">Contactar</h1>
+    <table> <!--A veces sale un borde blanco abajo, creo que solo es con los teléfonos y está relacionado con el tamaño del footer, pero es algo difícil de reproducir-->
+      <tr>
+        <td> 
+          <P>Disqus : disqus.com/by/Hlvnhlv</P>
+          <p>Discord : hlvnhlv#9849</p>
+        </td>
+        <td>
+          <p>SteamID : steamcommunity.com/id/hlvnhlv</p>
+          <p>Reddit : www.reddit.com/user/Tohka_DAL</p>
+        </td>
+      </tr>
+    </table>
+  </footer>
+  <nav class="MyBarrita" id="myTopnav"> <!--Y aquí el Nav, abajo del todo ya que así nada se pone por encima de él-->
+    <a href="#hero" class="active">Inicio</a>
+    <a href="#VR">Características</a>
+    <a href="#PC">PC o Standalone</a>
+    <a href="#Quest">Quest</a>
+    <a href="#WMR">WMR</a>
+    <a href="#Informarse">Informarse</a>
+    <a href="#FAQ">FAQ</a>
+    <a href="#contacto">Contactos</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+</body>
+</html>
